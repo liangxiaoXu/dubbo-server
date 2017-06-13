@@ -1,13 +1,13 @@
-package com.dubboServer.vo;
+package com.dubboServer.vo.res;
 
 /**
  * Created by xuliangxiao on 2017/6/12 17:52
  */
-public class User {
+public class UserRes {
     private String name;
     private int age;
 
-    public User(String name, int age) {
+    public UserRes(String name, int age) {
         this.name = name;
         this.age = age;
     }
@@ -28,4 +28,11 @@ public class User {
         this.age = age;
     }
 
+    @Override
+    public String toString() {
+        return "UserRes{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                '}';
+    }
 }
