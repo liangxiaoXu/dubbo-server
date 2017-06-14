@@ -1,9 +1,11 @@
 package com.dubboServer.vo.req;
 
+import java.io.Serializable;
+
 /**
  * Created by xuliangxiao on 2017/6/12 17:52
  */
-public class UserReq {
+public class UserReq implements Serializable{
     private String name;
     private int age;
 

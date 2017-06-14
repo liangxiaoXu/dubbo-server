@@ -1,9 +1,11 @@
 package com.dubboServer.vo.res;
 
+import java.io.Serializable;
+
 /**
  * Created by xuliangxiao on 2017/6/12 17:52
  */
-public class UserRes {
+public class UserRes  implements Serializable {
     private String name;
     private int age;
 

@@ -18,6 +18,7 @@ class CommonServiceImpl implements CommonService {
     public UserRes getUser(UserReq user) {
         log.info("param:" + user.toString());
         UserRes userRes = new UserRes(user.getName(), 10);
+        log.info("return:" + userRes.toString());
         return userRes;
     }
 
