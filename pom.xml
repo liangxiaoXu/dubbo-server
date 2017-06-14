@@ -18,10 +18,15 @@
         <sourceEncoding>UTF-8</sourceEncoding>
         <!--<resteasy.version>2.2.1.GA</resteasy.version>-->
         <spring.version>4.3.7.RELEASE</spring.version>
+        <!--<spring.version>2.5.6.SEC03</spring.version>-->
         <slf4j.version>1.7.5</slf4j.version>
         <logback.version>1.1.2</logback.version>
         <servlet.version>2.5</servlet.version>
         <jstl.version>1.2</jstl.version>
+        <dubbo.version>2.5.3</dubbo.version>
+        <zookeeper.version>3.3.3</zookeeper.version>
+        <zkclienk.version>0.1</zkclienk.version>
+
     </properties>
 
     <dependencyManagement>
@@ -150,6 +155,31 @@
                 <artifactId>commons-logging</artifactId>
                 <version>RELEASE</version>
             </dependency>
+
+            <!-- dubbo -->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>dubbo</artifactId>
+                <version>${dubbo.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.zookeeper</groupId>
+                <artifactId>zookeeper</artifactId>
+                <version>${zookeeper.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.sgroschupf</groupId>
+                <artifactId>zkclient</artifactId>
+                <version>${zkclienk.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>log4j</groupId>
+                <artifactId>log4j</artifactId>
+                <version>1.2.17</version>
+            </dependency>
+
 
         </dependencies>
     </dependencyManagement>
