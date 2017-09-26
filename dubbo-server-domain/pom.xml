@@ -5,14 +5,14 @@
     <parent>
         <artifactId>dubbo-server</artifactId>
         <groupId>dubbo-test</groupId>
-        <version>1.0-SNAPSHOT</version>
+        <version>1.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>dubbo-test</groupId>
     <artifactId>dubbo-server-domain</artifactId>
     <packaging>jar</packaging>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0</version>
 
 
 </project>
