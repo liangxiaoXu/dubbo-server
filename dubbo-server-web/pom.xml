@@ -131,6 +131,12 @@
             <artifactId>zkclient</artifactId>
         </dependency>
 
+        <!-- sentinel -->
+        <dependency>
+            <groupId>com.alibaba.csp</groupId>
+            <artifactId>sentinel-core</artifactId>
+        </dependency>
+
         <!-- 依赖本身的包 -->
         <dependency>
             <groupId>dubbo-test</groupId>
