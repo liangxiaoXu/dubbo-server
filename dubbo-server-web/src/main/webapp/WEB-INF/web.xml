@@ -52,6 +52,12 @@
     <listener>
         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
     </listener>
+
+    <!-- 加载限流规则 -->
+    <listener>
+        <listener-class>com.dubboServer.listener.SentinelRulesListener</listener-class>
+    </listener>
+
     <servlet>
         <servlet-name>spring</servlet-name>
         <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>

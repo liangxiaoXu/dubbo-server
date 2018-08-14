@@ -12,11 +12,6 @@ import com.dubboServer.vo.res.UserRes;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.stereotype.Service;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-
 /**
  * Created by xuliangxiao on 2017/6/13 12:46
  */
@@ -26,7 +21,6 @@ class CommonServiceImpl implements CommonService {
 
     @Override
     public UserRes getUser(UserReq user) {
-        initFlowRules();
 
         log.info("param:" + user.toString());
         UserRes userRes = null;
@@ -47,16 +41,4 @@ class CommonServiceImpl implements CommonService {
         return userRes;
     }
 
-    /**
-     * 初始化规则
-     */
-    public static void initFlowRules(){
-        List<FlowRule> rules = new ArrayList<>();
-        FlowRule rule = new FlowRule();
-        rule.setResource("index");
-        rule.setGrade(RuleConstant.FLOW_GRADE_QPS );
-        rule.setCount( 10 );//set limit QPS to 10
-        rules.add(rule);
-        FlowRuleManager.loadRules(rules);
-    }
 }
