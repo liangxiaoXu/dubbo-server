@@ -19,7 +19,7 @@ public class SentinelRulesListener implements ServletContextListener {
     public void contextInitialized(ServletContextEvent sce) {
         List<FlowRule> rules = new ArrayList<>();
 
-        rules.add(QpsRule.getQpsRule(10));
+        rules.add( QpsRule.getQps10Rule() );
 
         FlowRuleManager.loadRules(rules);
     }

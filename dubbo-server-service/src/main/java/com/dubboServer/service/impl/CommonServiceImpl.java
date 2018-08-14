@@ -26,10 +26,10 @@ class CommonServiceImpl implements CommonService {
         UserRes userRes = null;
         Entry entry = null;
         try{
-            entry = SphU.entry("index");
+            entry = SphU.entry("qps_10");
             userRes = new UserRes(user.getName(), 10);
         }catch( BlockException e ){
-
+            log.warn("qps_10 触发资源限流，请关注!");
         }finally {
             if( entry!= null ){
                 entry.exit();

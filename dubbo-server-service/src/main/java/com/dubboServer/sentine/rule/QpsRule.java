@@ -11,14 +11,17 @@ public class QpsRule {
 
     /**
      * QPS 规则
-     * @param qps 每秒可通过的次数
      * @return
      */
-    public static FlowRule getQpsRule( int qps ){
+    public static FlowRule getQps10Rule(){
         FlowRule rule = new FlowRule();
-        rule.setResource("index");
+        rule.setResource("qps_10");
         rule.setGrade(RuleConstant.FLOW_GRADE_QPS );
-        rule.setCount( qps );//set limit QPS
+        rule.setCount( 10 );//set limit QPS
+//        rule.setControlBehavior( RuleConstant.CONTROL_BEHAVIOR_DEFAULT );//直接拒绝
+//        rule.setControlBehavior( RuleConstant.CONTROL_BEHAVIOR_WARM_UP );//冷启动
+//        rule.setControlBehavior( RuleConstant.CONTROL_BEHAVIOR_RATE_LIMITER );//匀速器
+
         return rule;
     }
 
